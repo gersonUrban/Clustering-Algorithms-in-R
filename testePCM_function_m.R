@@ -25,12 +25,13 @@ pcm_result$membershipp[w,]
 # 
 # pcm_result = kmeans(db1[,1:2],4)
 
- # library(e1071)
- # pcm_result = cmeans(db1[,1:2],3)
- # distance = "euclidean"
- # U = update.partition_matrix.pcm(db1[,1:2],pcm_result$centers,distance)
+  library(e1071)
+  fcm_result = cmeans(db1[,1:2],3)
+  distance = "euclidean"
+ U = update.partition_matrix.pcm(db1[,1:2],fcm_result$centers,distance)
  # U2 = update.partition_matrix.pcm(db1[,1:2],pcm_result$centers,distance)
- # #w = c(139,221,179,176,282,283)
+ w = c(139,221,179,176,282,283)
+ U[w,]
  # 
  # 
  # pcm_result = cmeans(db1[,1:2],10)
